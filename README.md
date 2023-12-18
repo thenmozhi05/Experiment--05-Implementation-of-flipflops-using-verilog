@@ -139,7 +139,7 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 ### PROGRAM 
 ## SR-Flip Flop
-
+```
 module flipflops(S,R,clk,Q,Qbar);
 input S,R,clk;
 output reg Q;
@@ -152,9 +152,9 @@ Q=S|((~R)&Q);
 Qbar=R|((~S)&(Qbar));
 end
 endmodule
-
+```
 ## JK Flip-Flop
-
+```
 module jkfp(J,K,clk,Q,Qbar);
 input J,K,clk;
 output reg Q;
@@ -167,9 +167,9 @@ Q=(J&(~Q))|((~K)&Q);
 Qbar=((~J)&(Qbar))|K&(~Qbar);
 end
 endmodule
-
+```
 ## D-Flip Flop
-
+```
 module d(q,qbar,d1,clk);
 input d1,clk;
 output q,qbar;
@@ -181,9 +181,9 @@ nand(n2,clk,x);
 nand(q,n2,qbar);
 nand(qbar,n1,q);
 endmodule 
-
+```
 ## T-Flip Flop
-
+```
 module tff(t,qbar,q,clk);
 input t,clk;
 output q,qbar;
@@ -193,7 +193,7 @@ nand(n2,clk,t,q);
 nand(q,n1,qbar);
 nand(qbar,n2,q);
 endmodule
-
+```
 ### RTL LOGIC FOR FLIPFLOPS 
 ## SR-Flip Flop
 ![image](https://github.com/Himavath08/Experiment--05-Implementation-of-flipflops-using-verilog/assets/139110631/8251d47b-e6d4-4594-9d13-cc52780044a2)
